@@ -1,0 +1,30 @@
+{
+  "name": "ev-yarn-puppetier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.0",
+    "chai": "^4.2.0",
+    "chalk": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.1.0",
+    "jest-html-reporter": "^2.8.0",
+    "puppeteer": "^2.1.1",
+    "rimraf": "^3.0.1",
+    "ts-node": "^8.6.2"
+  },
+  "dependencies": {
+    "jest-environment-node": "latest",
+    "mkdirp": "latest"
+  }
+}
