@@ -23,7 +23,7 @@ but you can use the Core Puppetier and avoid the Chromium download.
 This project was created in WebStorm, 
 but it has been verified to work with Microsoft Visual Studio Code as well.
 
-## TypeScript Code Formatting Rules
+## Code Formatting Rules
 TypeScript code in this project is automatically formatted using  [Eslint](https://eslint.org/).
 In order to accept the project default formatting, your IDE must be configured to use the formatting style.
 
