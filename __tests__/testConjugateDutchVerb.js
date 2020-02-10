@@ -35,8 +35,13 @@ describe(
             const expected = 'leren';
             await pageObject.setVerb(expected);
             await pageObject.conjugate();
-            const pageHeader = await pageObject.getHeader();
-            expect(pageHeader).to.have.string(expected);
+            try {
+                const pageHeader = await pageObject.getHeader();
+                expect(pageHeader).to.have.string(expected)
+            } catch (e) {
+                console.log(e);
+                throw e;
+            }
         });
     }
 );
