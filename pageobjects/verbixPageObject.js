@@ -40,12 +40,18 @@ class VerbixPageObject {
     }
 
     async getHeader() {
+        await this.getPage().waitForSelector(VERB_HEADER_SELECTOR);
         return this.getText(VERB_HEADER_SELECTOR);
     }
 
     async close() {
         await this.getPage().close();
     }
+
+    async takeScreenshot(options) {
+        await this.getPage().screenshot(options);
+    }
+
 }
 
 module.exports = page => new VerbixPageObject(page);
