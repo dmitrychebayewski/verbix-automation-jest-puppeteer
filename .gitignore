@@ -105,5 +105,5 @@ dist
 # WebStorm
 .idea
 
-
+*.png
 /target/

@@ -5,13 +5,13 @@ describe(
     'Verbix search verb test',
     () => {
         let pageObject;
-        let page;
+        //let page;
 
         // eslint-disable-next-line no-undef
         beforeAll(async () => {
             // eslint-disable-next-line no-undef
             jest.setTimeout(timeout);
-            page = await global.__BROWSER__.newPage();
+            const page = await global.__BROWSER__.newPage();
             pageObject = require('../pageobjects/verbixPageObject.js')(page);
             await pageObject.open();
         }, timeout);
@@ -40,6 +40,8 @@ describe(
                 expect(pageHeader).to.have.string(expected)
             } catch (e) {
                 console.log(e);
+                await pageObject.takeScreenshot({path: 'verbixError.png',
+                    fullPage: true});
                 throw e;
             }
         });
