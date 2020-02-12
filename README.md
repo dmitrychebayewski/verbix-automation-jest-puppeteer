@@ -33,9 +33,27 @@ at: __tests__/testConjugateDutchVerb.js
 
 ## Running Tests
 This project uses [yarn](https://classic.yarnpkg.com/en/docs/migrating-from-npm/).
-Run tests using the following command: "yarn test".
-
+Run tests using the following command: 
+```
+$yarn test
+```
 ## Jest Execution Reports
 This project is using [jest-html-reporter](https://github.com/Hargne/jest-html-reporter).
 After the test execution, the html report is available at:
  ${project.build.directory}/target/generated-report/test-report.html
+ 
+## Docker (optional)
+This project is able to be executed in Docker container.
+The image is based on [Docker Puppeteer](https://hub.docker.com/r/buildkite/puppeteer)
+To build the image and run tests, run the following commands:
+```
+$docker build -t com.minskrotterdam/verbix .
+$docker run com.minskrotterdam/verbix
+```
+## Extracting Jest execution report from Docker container
+Use the following command to extract the test execution reports:
+```
+$docker container cp {CONTAINER_NAME}:/usr/src/app/target ./target 
+``` 
+## Writing the test execution report to ReportPortal (optional)
+Install the report portal 
