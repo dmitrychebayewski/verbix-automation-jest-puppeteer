@@ -1,6 +1,5 @@
-FROM node:10
+FROM buildkite/puppeteer:latest
 
-# Create app directory
 WORKDIR /usr/src/app
 
 # Install app dependencies
@@ -13,7 +12,8 @@ RUN npm install
 # RUN npm ci --only=production
 
 # Bundle app source
-COPY . .
+COPY ./__tests__ ./__tests__
+COPY ./pageobjects ./pageobjects
+COPY ./*.js ./
 
-EXPOSE 8080
 CMD [ "npm", "test" ]
